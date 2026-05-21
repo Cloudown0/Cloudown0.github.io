@@ -3,36 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloudown's New Space</title>
+    <title>Cloudown's Space | 建设中</title>
     <style>
+        :root {
+            --primary-color: #6e8efb;
+            --secondary-color: #a777e3;
+            --text-color: #ffffff;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #6e8efb 0%, #a777e3 100%);
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f2f5;
-            color: #1c1e21;
+            color: var(--text-color);
+            overflow: hidden;
         }
+
+        /* 动态背景装饰 */
+        .bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 0;
+            filter: blur(80px);
+        }
+        .circle-1 { width: 400px; height: 400px; top: -100px; left: -100px; }
+        .circle-2 { width: 300px; height: 300px; bottom: -50px; right: -50px; }
+
         .container {
+            position: relative;
+            z-index: 1;
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 3rem;
+            border-radius: 24px;
             text-align: center;
-            padding: 2rem;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            max-width: 500px;
+            width: 90%;
+            animation: fadeIn 1s ease-out;
         }
-        h1 { margin-bottom: 1rem; }
-        p { color: #65676b; }
-        a { color: #007bff; text-decoration: none; font-weight: bold; }
-        a:hover { text-decoration: underline; }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: #ffffff;
+            color: #6e8efb;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            background: #f8f9fa;
+        }
+
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
+    <div class="bg-circle circle-1"></div>
+    <div class="bg-circle circle-2"></div>
+
     <div class="container">
-        <h1>新主页建设中...</h1>
-        <p>这是 Cloudown 的新地盘，目前还在施工阶段。</p>
-        <p>你可以先去我的博客看看：<a href="https://Cloudown0.github.io/oldblog/">前往旧博客</a></p>
+        <h1>Cloudown's Space</h1>
+        <p>新主页正在构思与建设中...<br>这不仅是一个网页，更是我的一片灵感花园。</p>
+        
+        <a href="https://Cloudown0.github.io/oldblog/" class="btn">访问旧版博客</a>
+        
+        <div class="footer">
+            &copy; 2026 Cloudown. Stay hungry, stay foolish.
+        </div>
     </div>
 </body>
 </html>
