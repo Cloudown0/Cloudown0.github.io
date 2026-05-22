@@ -6,3 +6,12 @@ node_modules/
 public/
 .deploy*/
 _multiconfig.yml
+_config.yml
+_config.landscape.yml
+package.json
+package-lock.json
+scaffolds/
+source/
+themes/
+.github/
+.claude/
