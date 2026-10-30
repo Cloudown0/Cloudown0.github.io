@@ -1,0 +1,23 @@
+[
+  {
+    "id": "calculus",
+    "name": "微积分（甲）Ⅱ",
+    "year": 1,
+    "en": "Calculus",
+    "intro": "从空间与向量出发，理解连续变化的世界。"
+  },
+  {
+    "id": "physics",
+    "name": "大学物理（甲）",
+    "year": 1,
+    "en": "Physics",
+    "intro": "在运动、力与能量之间，寻找世界的规律。"
+  },
+  {
+    "id": "chemistry",
+    "name": "大学化学",
+    "year": 1,
+    "en": "Chemistry",
+    "intro": "从物质的状态走向结构，观察微观的秩序。"
+  }
+]

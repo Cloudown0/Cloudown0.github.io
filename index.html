@@ -1,118 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloudown's Space | 建设中</title>
-    <style>
-        :root {
-            --primary-color: #6e8efb;
-            --secondary-color: #a777e3;
-            --text-color: #ffffff;
-            --glass-bg: rgba(255, 255, 255, 0.1);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background: linear-gradient(135deg, #6e8efb 0%, #a777e3 100%);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: var(--text-color);
-            overflow: hidden;
-        }
-
-        /* 动态背景装饰 */
-        .bg-circle {
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            z-index: 0;
-            filter: blur(80px);
-        }
-        .circle-1 { width: 400px; height: 400px; top: -100px; left: -100px; }
-        .circle-2 { width: 300px; height: 300px; bottom: -50px; right: -50px; }
-
-        .container {
-            position: relative;
-            z-index: 1;
-            background: var(--glass-bg);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 3rem;
-            border-radius: 24px;
-            text-align: center;
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-            max-width: 500px;
-            width: 90%;
-            animation: fadeIn 1s ease-out;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-
-        p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 0.8rem 2rem;
-            background: #ffffff;
-            color: #6e8efb;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-            background: #f8f9fa;
-        }
-
-        .footer {
-            margin-top: 2rem;
-            font-size: 0.9rem;
-            opacity: 0.6;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
-</head>
-<body>
-    <div class="bg-circle circle-1"></div>
-    <div class="bg-circle circle-2"></div>
-
-    <div class="container">
-        <h1>Cloudown's Space</h1>
-        <p>新主页正在构思与建设中...</p>
-        
-        <a href="https://Cloudown0.github.io/oldblog/" class="btn">访问旧版博客</a>
-        
-        <div class="footer">
-            &copy; 2026 Cloudown. Stay hungry, stay foolish.
-        </div>
-    </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#f3ede2" />
+    <meta
+      name="description"
+      content="Cloudown 的个人空间。在生活里发现，在不同领域间探索，记录学习与思考。"
+    />
+    <link rel="icon" type="image/png" href="/assets/Cloudown.png" />
+    <title>Cloudown — Always exploring.</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳至正文</a>
+    <header class="site-header">
+      <a class="wordmark" href="#/" aria-label="Cloudown 首页"
+        >cloudown<span aria-hidden="true">↗</span></a
+      >
+      <nav aria-label="主导航">
+        <a href="#/" data-nav="home">Home</a><span aria-hidden="true">|</span
+        ><a href="#/projects" data-nav="projects">Projects</a
+        ><span aria-hidden="true">|</span
+        ><a href="#/thoughts" data-nav="thoughts">Thoughts</a
+        ><span aria-hidden="true">|</span
+        ><a href="#/about" data-nav="about">About</a>
+      </nav>
+    </header>
+    <main id="main" tabindex="-1"></main>
+    <footer class="site-footer">
+      <a href="#/">Cloudown.</a><span>保持好奇，慢慢生长。</span
+      ><a
+        href="https://github.com/Cloudown0"
+        target="_blank"
+        rel="noopener noreferrer"
+        >GitHub ↗</a
+      >
+    </footer>
+    <noscript
+      >请启用 JavaScript 浏览本站。原博客仍可在
+      https://cloudown0.github.io/oldblog/ 阅读。</noscript
+    >
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
